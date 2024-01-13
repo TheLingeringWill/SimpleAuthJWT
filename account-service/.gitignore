@@ -1,0 +1,13 @@
+# vim
+*~
+*.swp
+*.swo
+*.swn
+
+# dependencies
+/3rdparty
+
+# artifacts
+/build
+/bin
+/uploads
