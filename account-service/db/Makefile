@@ -1,7 +1,7 @@
 SRC_DIR := .
-DOCKER_REPO := service
+DOCKER_REPO := simple-auth-jwt
 TAG := account-db
-DOCKER_ID := famyhub
+DOCKER_ID := thelingeringwill
 
 # Lint the project according to .sqlfluff
 lint:
@@ -13,11 +13,11 @@ fix:
 
 # Build image as target
 docker-build:
-	@docker build -t ${DOCKER_REPO}:${TAG} ${SRC_DIR} 
+	@docker build -t ${DOCKER_ID}/${DOCKER_REPO}:${TAG} ${SRC_DIR} 
 
 # Build image without using cache
 docker-clean-build:
-	@docker build --no-cache -t ${DOCKER_REPO}:${TAG} ${SRC_DIR};
+	@docker build --no-cache -t ${DOCKER_ID}/${DOCKER_REPO}:${TAG} ${SRC_DIR};
 
 # Run the container on specific port
 docker-run:
