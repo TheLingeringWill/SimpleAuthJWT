@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "auth.fullname" . }}-configmap 
+data:
+  AUTH_SERVICE_HOST: 0.0.0.0
+  AUTH_SERVICE_PORT: '80'
+  AUTH_DB_TYPE: postgres
+  AUTH_DB_HOST: {{ include "auth.db.fullname" . }}-service.default.svc.cluster.local
+  AUTH_DB_PORT: '5432'
+  AUTH_DB_NAME: famy_auth
+  AUTH_DB_USER: postgres
+  AUTH_DB_PASSWORD: root
+  AUTH_DB_CLIENT_NAME: default
+  AUTH_DB_ENCODING: ''
+  AUTH_TOKEN_ISSUER: api.famy
+  AUTH_TOKEN_AUDIENCE: famy.com
+  AUTH_TOKEN_PRIVATE_KEY: blablaa
+  AUTH_SMTP_HOST: smtp.gmail.com
+  AUTH_SMTP_PORT: '587'
+  AUTH_SMTP_SENDER: jonathan.elbaz92@gmail.com
+  AUTH_SMTP_LOGIN: jonathan.elbaz92@gmail.com
+  AUTH_SMTP_PASSOWRD: gsissutqnxiolbhq
+  ACCOUNT_HOST_NAME_URL: http://account-service.default.svc.cluster.local

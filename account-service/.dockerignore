@@ -1,0 +1,20 @@
+# git repo
+.git
+.gitignore
+.gitmodule
+.vscode
+
+# vim
+*~
+*.swp
+*.swo
+*.swn
+
+# dependencies
+/3rdparty
+
+# artifacts
+/build
+/bin
+/uploads
+/vcpkg
