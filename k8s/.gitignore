@@ -7,7 +7,6 @@
 *.helm
 
 # Ignore temporary files and directories
-*.yaml
 *.yaml~
 *.tpl
 *.tpl~
