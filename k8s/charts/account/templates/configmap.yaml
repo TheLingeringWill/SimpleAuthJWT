@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "account.fullname" . }}-configmap 
+data:
+  ACCOUNT_SERVICE_HOST: 0.0.0.0
+  ACCOUNT_SERVICE_PORT: '80'
+  ACCOUNT_DB_TYPE: postgres
+  ACCOUNT_DB_HOST: {{ include "account.db.fullname" . }}-service.default.svc.cluster.local
+  ACCOUNT_DB_PORT: '5432'
+  ACCOUNT_DB_NAME: famy_account
+  ACCOUNT_DB_USER: postgres
+  ACCOUNT_DB_PASSWORD: root
+  ACCOUNT_DB_CLIENT_NAME: default
+  ACCOUNT_TOKEN_ISSUER: api.famy
+  ACCOUNT_TOKEN_AUDIENCE: famy.com
+  ACCOUNT_TOKEN_PRIVATE_KEY: blablaa
