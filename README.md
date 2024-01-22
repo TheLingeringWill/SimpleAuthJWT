@@ -2,16 +2,39 @@
 This project serves as an illustrative example of creating a basic authentication application using JWT tokens and one-time passwords (OTP) for enhanced security measures using microservices architecture with the service mesh.
 
 ## Prerequisites
+## Install Docker and Minikube
+https://www.docker.com/get-started/
 
-Before you begin, ensure you have met the following requirements:
+https://minikube.sigs.k8s.io/docs/start/
 
-- [Docker](https://www.docker.com/)
+Then start the Kubernetes cluster:
+```
+minikube start --cpus=2 --memory=5000 --driver=docker
+```
+## Install Istio
+https://istio.io/latest/docs/setup/getting-started/
+```
+cd istio-1.17.0    
+export PATH=$PWD/bin:$PATH    
+istioctl install --set profile=demo -y
+cd ..   
+```
+Enable auto-injection of the Istio side-cars when the pods are started:
+```
+kubectl label namespace default istio-injection=enabled
+```
+Install the Istio addons (Kiali, Prometheus, Jaeger, Grafana):
+```
+kubectl apply -f samples/addons
+```
+## 
+Enable auto-injection of the Istio side-cars when the pods are started:
+```
+kubectl label namespace default istio-injection=enabled
+```
+## Install Helm
+https://helm.sh/docs/intro/install/
 
-- [Helm](https://helm.sh/)
-
-- [Istio](https://istio.io/)
- 
-- [Yarn](https://yarnpkg.com/)
 
 ## Getting Started
 
