@@ -7,8 +7,9 @@
 *.helm
 
 # Ignore temporary files and directories
+charts/
+*.yaml
 *.yaml~
-*.tpl
 *.tpl~
 
 # Ignore Helm-generated files

@@ -23,7 +23,7 @@ const OtpInput = ({ email, id }: OtpInputProps): JSX.Element => {
       JSON.stringify({ email: email, id: id, otp: value }),
     );
     if (resp.status === 200) {
-      push('/home');
+      push('/connected');
     } else {
       setErrorMessage(true);
     }

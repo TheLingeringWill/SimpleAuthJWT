@@ -112,8 +112,8 @@ AuthCtrl::signUp(HttpRequestPtr req, AdviceCallback callback)
           getSMTPMailPlugin()->sendEmail(
             emailAccount,
             "Verify your email",
-            "please click on here : http://localhost:3000/auth/" +
-              std::to_string(id) + "/confirm-email/" + verifyToken,
+            "please click on here : http://localhost:3000/sign-up/" +
+              std::to_string(id) + "/confirm/" + verifyToken,
             false,
             [](const std::string& message) { std::cout << message; }
           );
