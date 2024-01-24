@@ -43,7 +43,7 @@ These instructions will help you set up and run the project on your local machin
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-repository.git --recurse-submodule
+    git clone https://github.com/your-username/your-repository.git --recurse-submodules
     cd your-repository
     ```
 2. Deploy the infrastructure and forwarding port
