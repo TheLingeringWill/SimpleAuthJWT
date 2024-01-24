@@ -58,7 +58,7 @@ const SignUpFormFields: InputFormAuthProps<
   {
     type: 'text',
     name: 'pseudo',
-    registerOpt: { validate: async (value: string) => value === 'pseudo' },
+    registerOpt: { },
     placeholder: 'Pseudo',
     srcImage: '/icons/account.svg',
     errorMessage: 'Pseudo already exists',
