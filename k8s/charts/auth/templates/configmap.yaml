@@ -16,9 +16,9 @@ data:
   AUTH_TOKEN_ISSUER: api.famy
   AUTH_TOKEN_AUDIENCE: famy.com
   AUTH_TOKEN_PRIVATE_KEY: blablaa
-  AUTH_SMTP_HOST: smtp.gmail.com
+  AUTH_SMTP_HOST: your_cmtp_host
   AUTH_SMTP_PORT: '587'
-  AUTH_SMTP_SENDER: jonathan.elbaz92@gmail.com
-  AUTH_SMTP_LOGIN: jonathan.elbaz92@gmail.com
-  AUTH_SMTP_PASSOWRD: gsissutqnxiolbhq
+  AUTH_SMTP_SENDER: your_smtp_sender
+  AUTH_SMTP_LOGIN: your_smtp_login
+  AUTH_SMTP_PASSOWRD: your_token
   ACCOUNT_HOST_NAME_URL: http://account-service.default.svc.cluster.local
